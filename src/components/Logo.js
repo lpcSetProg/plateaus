@@ -20,9 +20,10 @@ export default class Logo extends Component <{}> {
       return (
          <View style={styles.container}>
           <Image
-          style={{width: 300, height: 100}}
+          style={{width: 300, height: 95}}
           source={require('../images/Plateaus.png')}
           />
+          <Text style={styles.logoText}>One-up your climbing. </Text>
         </View>
       ) 
   }
@@ -32,6 +33,13 @@ export default class Logo extends Component <{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  logoText: {
+   
+    fontSize: 18,
+    color: 'rgba(0, 0, 0, 0.7)'
+
   }
 });
