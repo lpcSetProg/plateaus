@@ -30,9 +30,9 @@ export default class Logo extends Component <{}> {
             placeholder="Password"
             placeholderTextColor="#ffffff"
             />
-            <TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
                 <Text>
-
+                    <Text style={styles.buttonText}>Login</Text>
                 </Text>
             </TouchableOpacity>
         </View>
@@ -55,6 +55,21 @@ inputBox: {
     fontSize: 16,
     color: '#ffffff',
     marginTop: 10
-}
+},
+button: {
+    width: 300, 
+    backgroundColor: '#1c313a',  
+    borderRadius: 25,
+    marginTop: 10,
+    paddingVertical: 16
+},
+buttonText: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    marginTop: 0,
+    width: 200,
+    justifyContent: 'center', 
+    alignItems: 'center' 
+},
 
 });
