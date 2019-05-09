@@ -16,23 +16,24 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class Logo extends Component <{}> { 
+export default class Form extends Component <{}> { 
   render() {
       return (
          <View style={styles.container}>
             <TextInput style={styles.inputBox} 
-            underlineColorAndroid='rgba(0,0,0,0)' 
-            placeholder="Email"
-            placeholderTextColor="#ffffff"
+              underlineColorAndroid='rgba(0,0,0,0)' 
+              placeholder="Email"
+              placeholderTextColor="#ffffff"
             />
             <TextInput style={styles.inputBox} 
-            underlineColorAndroid='rgba(0,0,0,0)' 
-            placeholder="Password"
-            placeholderTextColor="#ffffff"
+              underlineColorAndroid='rgba(0,0,0,0)' 
+              placeholder="Password"
+              secureTextEntry={true}
+              placeholderTextColor="#ffffff"
             />
             <TouchableOpacity style={styles.button}>
                 <Text>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>{this.props.type}</Text>
                 </Text>
             </TouchableOpacity>
         </View>
@@ -43,7 +44,7 @@ export default class Logo extends Component <{}> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -58,18 +59,20 @@ inputBox: {
 },
 button: {
     width: 300, 
+    textAlign: 'center',
+    justifyContent: 'center', 
     backgroundColor: '#1c313a',  
     borderRadius: 25,
     marginTop: 10,
     paddingVertical: 16
 },
 buttonText: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginTop: 0,
-    width: 200,
-    justifyContent: 'center', 
-    alignItems: 'center' 
+   justifyContent: 'center', 
+   textAlign: 'center',
+   fontWeight: 'bold',
+   fontSize: 18,
+   marginTop: 0,
+   width: 200
 },
 
 });

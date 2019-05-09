@@ -17,18 +17,18 @@ import {
 import Logo from '../components/Logo';
 import Form from '../components/Form';
 
-export default class Login extends Component <{}> { 
+export default class SignUp extends Component <{}> { 
     render() {
         return (
             <View style={styles.container}>
               <Logo/>
-              <Form type="Login"/>
+              <Form type="SignUp"/>
               <View style={styles.signUpTextCont}>
                  <Text style={styles.signUpText}>
-                   Don't have an account yet?
+                   Already have an account?
                  </Text>
                  <Text style={styles.signUpButton}>
-                   Signup 
+                   Sign in 
                  </Text>
               </View>
             </View>

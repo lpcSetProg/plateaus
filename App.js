@@ -15,7 +15,8 @@ import {
   StatusBar
 } from 'react-native';
 
-import Login from './src/pages/Login';
+import Routes from './src/Routes';
+
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -26,7 +27,7 @@ export default class App extends Component<Props> {
           backgroundColor="#000000"
           barStyle="light-contnent"
         />
-        <Login/>
+        <SignUp/>
        
       </View>
     );
@@ -36,7 +37,7 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#E8EAF6',
-    flex: 1,
+    flexGrow: 1,
     alignItems:'center',
     justifyContent:'center'
   }
